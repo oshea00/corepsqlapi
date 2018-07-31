@@ -10,16 +10,16 @@ namespace webapi.api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class TodosController : ControllerBase
-    {
+    {   
         mosheaContext context;
         public TodosController(mosheaContext context) {
             this.context = context;
         }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<Todos>> Get()
+        public IEnumerable<Todos> Get()
         {
-            return Ok(context.Todos.ToList<Todos>());
+            return context.Todos.ToList<Todos>();
         }
 
         // GET api/values/5

@@ -8,8 +8,8 @@ namespace webapi.api.Models
     {
         public mosheaContext()
         {
+            
         }
-
         public mosheaContext(DbContextOptions<mosheaContext> options)
             : base(options)
         {
@@ -23,7 +23,7 @@ namespace webapi.api.Models
             {
                 optionsBuilder.UseInMemoryDatabase("todos");
             }
-        }
+        }   
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
